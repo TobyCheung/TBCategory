@@ -1,2 +1,2 @@
 # TBCategory
-iOS Categories in common use
+iOS Categories in common use.
