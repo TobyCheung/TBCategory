@@ -114,7 +114,7 @@
 /**
  *  @return 从xib加载控件
  */
-+ (instancetype)viewFromXib {
++ (instancetype)tb_viewFromXib {
 
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
 }

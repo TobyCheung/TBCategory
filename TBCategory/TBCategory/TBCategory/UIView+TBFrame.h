@@ -19,6 +19,6 @@
 @property (nonatomic, assign) CGFloat tb_right;
 @property (nonatomic, assign) CGFloat tb_bottom;
 
-+ (instancetype)viewFromXib;
++ (instancetype)tb_viewFromXib;
 
 @end

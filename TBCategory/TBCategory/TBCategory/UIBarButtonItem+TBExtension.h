@@ -1,6 +1,5 @@
 //
 //  UIBarButtonItem+TBExtension.h
-//  百思不得姐
 //
 //  Created by 张天兵 on 16/5/26.
 //  Copyright © 2016年 张天兵. All rights reserved.

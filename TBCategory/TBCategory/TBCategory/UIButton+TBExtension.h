@@ -1,6 +1,5 @@
 //
 //  UIButton+TBExtension.h
-//  TBBilibili
 //
 //  Created by 张天兵 on 16/7/9.
 //  Copyright © 2016年 张天兵. All rights reserved.
