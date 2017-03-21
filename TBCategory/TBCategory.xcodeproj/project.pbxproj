@@ -49,6 +49,7 @@
 		7F491E781E8128A700636F8C /* TBKeyChainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKeyChainTool.m; sourceTree = "<group>"; };
 		7F491E7A1E812A0A00636F8C /* NSString+TBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBExtension.h"; sourceTree = "<group>"; };
 		7F491E7B1E812A0A00636F8C /* NSString+TBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBExtension.m"; sourceTree = "<group>"; };
+		7F491E7D1E812E4000636F8C /* macro_universal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macro_universal.h; sourceTree = "<group>"; };
 		7F84A86D1E4EEBC4001E8468 /* TBCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F84A8711E4EEBC4001E8468 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F84A8731E4EEBC4001E8468 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 				7F84A87E1E4EEBC4001E8468 /* LaunchScreen.storyboard */,
 				7F84A8811E4EEBC4001E8468 /* Info.plist */,
 				7F84A8701E4EEBC4001E8468 /* Supporting Files */,
+				7F491E7D1E812E4000636F8C /* macro_universal.h */,
 			);
 			path = TBCategory;
 			sourceTree = "<group>";
