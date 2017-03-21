@@ -19,7 +19,6 @@
 		7F84A8961E4EEBC5001E8468 /* TBCategoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8951E4EEBC5001E8468 /* TBCategoryUITests.m */; };
 		7F84A8B61E4EEC56001E8468 /* NSCalendar+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8A51E4EEC56001E8468 /* NSCalendar+TBExtension.m */; };
 		7F84A8B71E4EEC56001E8468 /* NSDate+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8A71E4EEC56001E8468 /* NSDate+TBExtension.m */; };
-		7F84A8B81E4EEC56001E8468 /* NSString+TBSizeForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8A91E4EEC56001E8468 /* NSString+TBSizeForFile.m */; };
 		7F84A8B91E4EEC56001E8468 /* UIBarButtonItem+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8AB1E4EEC56001E8468 /* UIBarButtonItem+TBExtension.m */; };
 		7F84A8BA1E4EEC56001E8468 /* UIButton+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8AD1E4EEC56001E8468 /* UIButton+TBExtension.m */; };
 		7F84A8BB1E4EEC56001E8468 /* UIImage+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8AF1E4EEC56001E8468 /* UIImage+TBExtension.m */; };
@@ -70,8 +69,6 @@
 		7F84A8A51E4EEC56001E8468 /* NSCalendar+TBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+TBExtension.m"; sourceTree = "<group>"; };
 		7F84A8A61E4EEC56001E8468 /* NSDate+TBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TBExtension.h"; sourceTree = "<group>"; };
 		7F84A8A71E4EEC56001E8468 /* NSDate+TBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TBExtension.m"; sourceTree = "<group>"; };
-		7F84A8A81E4EEC56001E8468 /* NSString+TBSizeForFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBSizeForFile.h"; sourceTree = "<group>"; };
-		7F84A8A91E4EEC56001E8468 /* NSString+TBSizeForFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBSizeForFile.m"; sourceTree = "<group>"; };
 		7F84A8AA1E4EEC56001E8468 /* UIBarButtonItem+TBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TBExtension.h"; sourceTree = "<group>"; };
 		7F84A8AB1E4EEC56001E8468 /* UIBarButtonItem+TBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TBExtension.m"; sourceTree = "<group>"; };
 		7F84A8AC1E4EEC56001E8468 /* UIButton+TBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TBExtension.h"; sourceTree = "<group>"; };
@@ -191,8 +188,6 @@
 				7F84A8A51E4EEC56001E8468 /* NSCalendar+TBExtension.m */,
 				7F84A8A61E4EEC56001E8468 /* NSDate+TBExtension.h */,
 				7F84A8A71E4EEC56001E8468 /* NSDate+TBExtension.m */,
-				7F84A8A81E4EEC56001E8468 /* NSString+TBSizeForFile.h */,
-				7F84A8A91E4EEC56001E8468 /* NSString+TBSizeForFile.m */,
 				7F84A8AA1E4EEC56001E8468 /* UIBarButtonItem+TBExtension.h */,
 				7F84A8AB1E4EEC56001E8468 /* UIBarButtonItem+TBExtension.m */,
 				7F84A8AC1E4EEC56001E8468 /* UIButton+TBExtension.h */,
@@ -352,7 +347,6 @@
 				7F84A8BC1E4EEC56001E8468 /* UIImageView+TBSetHead.m in Sources */,
 				7F84A8B71E4EEC56001E8468 /* NSDate+TBExtension.m in Sources */,
 				7F84A8751E4EEBC4001E8468 /* AppDelegate.m in Sources */,
-				7F84A8B81E4EEC56001E8468 /* NSString+TBSizeForFile.m in Sources */,
 				7F491E7C1E812A0A00636F8C /* NSString+TBExtension.m in Sources */,
 				7F84A8BD1E4EEC56001E8468 /* UITextField+TBPlaceHolderColor.m in Sources */,
 				7F84A8721E4EEBC4001E8468 /* main.m in Sources */,
