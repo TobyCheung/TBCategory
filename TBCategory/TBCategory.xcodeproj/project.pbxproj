@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F491E791E8128A700636F8C /* TBKeyChainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F491E781E8128A700636F8C /* TBKeyChainTool.m */; };
+		7F491E7C1E812A0A00636F8C /* NSString+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F491E7B1E812A0A00636F8C /* NSString+TBExtension.m */; };
 		7F84A8721E4EEBC4001E8468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8711E4EEBC4001E8468 /* main.m */; };
 		7F84A8751E4EEBC4001E8468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8741E4EEBC4001E8468 /* AppDelegate.m */; };
 		7F84A8781E4EEBC4001E8468 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8771E4EEBC4001E8468 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		7F491E771E8128A700636F8C /* TBKeyChainTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKeyChainTool.h; sourceTree = "<group>"; };
 		7F491E781E8128A700636F8C /* TBKeyChainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKeyChainTool.m; sourceTree = "<group>"; };
+		7F491E7A1E812A0A00636F8C /* NSString+TBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBExtension.h"; sourceTree = "<group>"; };
+		7F491E7B1E812A0A00636F8C /* NSString+TBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBExtension.m"; sourceTree = "<group>"; };
 		7F84A86D1E4EEBC4001E8468 /* TBCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F84A8711E4EEBC4001E8468 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F84A8731E4EEBC4001E8468 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				7F84A8B31E4EEC56001E8468 /* UITextField+TBPlaceHolderColor.m */,
 				7F84A8B41E4EEC56001E8468 /* UIView+TBFrame.h */,
 				7F84A8B51E4EEC56001E8468 /* UIView+TBFrame.m */,
+				7F491E7A1E812A0A00636F8C /* NSString+TBExtension.h */,
+				7F491E7B1E812A0A00636F8C /* NSString+TBExtension.m */,
 			);
 			path = TBCategory;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				7F84A8B71E4EEC56001E8468 /* NSDate+TBExtension.m in Sources */,
 				7F84A8751E4EEBC4001E8468 /* AppDelegate.m in Sources */,
 				7F84A8B81E4EEC56001E8468 /* NSString+TBSizeForFile.m in Sources */,
+				7F491E7C1E812A0A00636F8C /* NSString+TBExtension.m in Sources */,
 				7F84A8BD1E4EEC56001E8468 /* UITextField+TBPlaceHolderColor.m in Sources */,
 				7F84A8721E4EEBC4001E8468 /* main.m in Sources */,
 				7F84A8BB1E4EEC56001E8468 /* UIImage+TBExtension.m in Sources */,
