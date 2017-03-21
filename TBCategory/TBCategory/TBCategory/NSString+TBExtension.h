@@ -11,7 +11,5 @@
 @interface NSString (TBExtension)
 
 
-- (unsigned long long)fileSize;
-
 
 @end

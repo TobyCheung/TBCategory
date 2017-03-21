@@ -17,5 +17,7 @@
 /** 删除钥匙串中的信息 */
 + (void)delete_DataAndkey_ForService:(NSString *)service;
 
+/** 获取设备IDFV */
++ (NSString *)getIDFV;
 
 @end

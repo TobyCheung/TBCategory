@@ -7,8 +7,26 @@
 //
 
 #import "TBKeyChainTool.h"
+#import <UIKit/UIKit.h>
 
 @implementation TBKeyChainTool
+
+/**
+ 获取设备IDFV
+ 
+ @return IDFV（对应于设备和应用开发商的混合唯一标识）
+ */
++ (NSString *)getIDFV {
+    
+    NSString *IDFV = (NSString *)[self loadData_ForService:@"IDFV"];
+    
+    if (!IDFV || [IDFV isEqualToString:@""]) {
+        IDFV = [UIDevice currentDevice].identifierForVendor.UUIDString;
+        [self saveData:IDFV forService:@"IDFV"];
+    }
+    
+    return IDFV;
+}
 
 /**
  存储数据到钥匙串
