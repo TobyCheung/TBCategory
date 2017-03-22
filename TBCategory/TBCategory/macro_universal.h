@@ -30,6 +30,9 @@
 #define kScreenSize \
 ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? CGSizeMake([UIScreenmainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreenmainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale) : [UIScreen mainScreen].bounds.size)
 
+//设定屏幕方向
+#define LockInterfaceOrientation(orientation)  if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {   SEL selector = NSSelectorFromString(@"setOrientation:");    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];   [invocation setSelector:selector];    [invocation setTarget:[UIDevice currentDevice]];    int val = orientation;   [invocation setArgument:&val atIndex:2];    [invocation invoke]; }
+
 //一些缩写
 #define kApplication        [UIApplication sharedApplication]
 #define kKeyWindow          [UIApplication sharedApplication].keyWindow
