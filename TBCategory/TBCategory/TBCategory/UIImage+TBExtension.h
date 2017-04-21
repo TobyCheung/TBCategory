@@ -32,4 +32,14 @@
 /** 为给定图片生成一张带蒙版的圆角矩形图片 */
 - (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius coverAlpha:(CGFloat)alpha;
 
+/** 为image生成一张带边框的图片 */
++ (UIImage *)tb_bolderImageWithImage:(UIImage *)image imageSize:(CGSize)size borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+/** 生成一张带边框的图片 */
+- (UIImage *)tb_getBolderImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+
+/** 缩放图片至给定尺寸 */
++ (UIImage *)tb_originImage:(UIImage *)image scaleToSize:(CGSize)size;
+/** 缩放至给定尺寸 */
+- (UIImage *)tb_scaleToSize:(CGSize)size;
+
 @end

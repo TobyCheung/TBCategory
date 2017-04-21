@@ -43,8 +43,7 @@
  *
  *  @return 裁剪后的圆形图片
  */
-- (instancetype)tb_circleImage
-{
+- (instancetype)tb_circleImage {
     // 1.开启图形上下文
     // scale:比例因素 点:像素比例 0:自动识别比例因素
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
@@ -74,8 +73,7 @@
  *
  *  @return 裁剪后的圆角矩形图片
  */
-- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius
-{
+- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius {
     // 1.开启图形上下文
     // scale:比例因素 点:像素比例 0:自动识别比例因素
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
@@ -99,8 +97,7 @@
 }
 
 
-- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius coverAlpha:(CGFloat)alpha
-{
+- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius coverAlpha:(CGFloat)alpha {
 
 //    UIView *cover = [[UIView alloc] init];
 //    cover.frame = CGRectMake(0, 0, self.size.width, self.size.height);
@@ -149,8 +146,7 @@
  *
  *  @return 裁剪后的圆形图片
  */
-+ (instancetype)tb_circleImage:(NSString *)name
-{
++ (instancetype)tb_circleImage:(NSString *)name {
     return [[self imageNamed:name] tb_circleImage];
 }
 
@@ -174,8 +170,7 @@
  *
  *  @return 不会被渲染的图片
  */
-+ (instancetype)tb_imageWithOriginalImageNamed:(NSString *)imageName
-{
++ (instancetype)tb_imageWithOriginalImageNamed:(NSString *)imageName {
     // 加载图片
     UIImage *image = [UIImage imageNamed:imageName];
     
@@ -200,6 +195,97 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+
+/**
+ 为image生成一张带边框的图片
+
+ @param image 原始图片
+ @param size 原始图片尺寸
+ @param borderWidth 边框宽度
+ @param borderColor 边框颜色
+ @return 带边框的图片
+ */
++ (UIImage *)tb_bolderImageWithImage:(UIImage *)image imageSize:(CGSize)size borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+    
+    CGSize newSize = CGSizeMake(size.width + 2 * borderWidth, size.height + 2 * borderWidth);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    [borderColor set];
+    [path fill];
+    path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(borderWidth, borderWidth, size.width, size.height)];
+    [path addClip];
+    [image drawInRect:CGRectMake(borderWidth, borderWidth, size.width, size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+
+/**
+ 生成一张带边框的图片
+
+ @param borderWidth 边框宽度
+ @param borderColor 边框颜色
+ @return 带边框的图片
+ */
+- (UIImage *)tb_getBolderImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+    
+    CGSize newSize = CGSizeMake(self.size.width + 2 * borderWidth, self.size.height + 2 * borderWidth);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    [borderColor set];
+    [path fill];
+    path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(borderWidth, borderWidth, self.size.width, self.size.height)];
+    [path addClip];
+    [self drawInRect:CGRectMake(borderWidth, borderWidth, self.size.width, self.size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+
+/**
+ 缩放图片至给定尺寸
+
+ @param image 原始图片
+ @param size 给定尺寸
+ @return 缩放后的图片
+ */
++ (UIImage *)tb_originImage:(UIImage *)image scaleToSize:(CGSize)size {
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [image drawInRect:CGRectMake(0,0, size.width, size.height)];
+    
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
+}
+
+
+/**
+ 缩放至给定尺寸
+
+ @param size 给定尺寸
+ @return 缩放后的图片
+ */
+- (UIImage *)tb_scaleToSize:(CGSize)size {
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [self drawInRect:CGRectMake(0,0, size.width, size.height)];
+    
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
 }
 
 
