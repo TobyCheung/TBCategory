@@ -13,6 +13,6 @@
 
 - (void)setNormalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
-
+- (void)enlargeEdgeWithTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right;
 
 @end
