@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface TBEnlargeButton : UIButton
+
+/**
+ 按钮创建
+ */
++ (instancetype)button;
+
+/**
+ 扩大按钮点击范围
+ */
+- (void)setEnlargeEdgeTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right;
+
 
 @end
