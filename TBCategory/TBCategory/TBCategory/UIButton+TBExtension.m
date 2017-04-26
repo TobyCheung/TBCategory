@@ -16,23 +16,78 @@ static char leftNameKey;
 static char bottomNameKey;
 static char rightNameKey;
 
-- (void)setBackgroundNormalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
 
-    [self setBackgroundImage:normalImage forState:UIControlStateNormal];
-    [self setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
-    [self addTarget:target action:action forControlEvents:controlEvents];
+#pragma mark - 按钮图片和事件响应设置
+/**
+ 按钮设置背景图片和事件响应
+
+ @param normalImage 普通状态背景图片
+ @param highlightedImage 高亮状态背景图片
+ @param selectedImage 选中状态背景图片
+ @param target 代理
+ @param action 事件响应
+ @param controlEvents 事件
+ */
+- (void)setBackgroundNormalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage selectedImage:(UIImage *)selectedImage addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
+
+    if (normalImage) {
+        [self setBackgroundImage:normalImage forState:UIControlStateNormal];
+    }
+    
+    if (highlightedImage) {
+        [self setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
+    }
+    
+    if (selectedImage) {
+        [self setBackgroundImage:selectedImage forState:UIControlStateSelected];
+    }
+    
+    if (target && action && controlEvents) {
+        [self addTarget:target action:action forControlEvents:controlEvents];
+    }
+    
+}
+
+/**
+ 按钮设置图片和事件响应
+ 
+ @param normalImage 普通状态图片
+ @param highlightedImage 高亮状态图片
+ @param selectedImage 选中状态图片
+ @param target 代理
+ @param action 事件响应
+ @param controlEvents 事件
+ */
+- (void)setNormalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage selectedImage:(UIImage *)selectedImage addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
+
+    if (normalImage) {
+        [self setImage:normalImage forState:UIControlStateNormal];
+    }
+    
+    if (highlightedImage) {
+        [self setImage:highlightedImage forState:UIControlStateHighlighted];
+    }
+    
+    if (selectedImage) {
+        [self setImage:selectedImage forState:UIControlStateSelected];
+    }
+    
+    if (target && action && controlEvents) {
+        [self addTarget:target action:action forControlEvents:controlEvents];
+    }
+
 }
 
 
-- (void)setNormalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
+#pragma mark - 扩大按钮点击范围
+/**
+ 扩大按钮点击范围
 
-    [self setImage:normalImage forState:UIControlStateNormal];
-    [self setImage:highlightedImage forState:UIControlStateHighlighted];
-    [self addTarget:target action:action forControlEvents:controlEvents];
-}
-
-
-/************* 扩大按钮点击范围 *************/
+ @param top 顶部扩大数值
+ @param left 左边扩大数值
+ @param bottom 底部扩大数值
+ @param right 右边扩大数值
+ */
 - (void)enlargeEdgeWithTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right {
     
     objc_setAssociatedObject(self, &topNameKey, [NSNumber numberWithFloat:top], OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -66,7 +121,6 @@ static char rightNameKey;
     
     return CGRectContainsPoint(rect, point) ? self: nil;
 }
-/*************  扩大按钮点击范围  *************/
 
 
 @end
