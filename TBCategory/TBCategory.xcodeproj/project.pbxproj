@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F491E791E8128A700636F8C /* TBKeyChainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F491E781E8128A700636F8C /* TBKeyChainTool.m */; };
 		7F491E7C1E812A0A00636F8C /* NSString+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F491E7B1E812A0A00636F8C /* NSString+TBExtension.m */; };
+		7F5114581EB031E300F66820 /* TBEnlargeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5114571EB031E300F66820 /* TBEnlargeButton.m */; };
 		7F84A8721E4EEBC4001E8468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8711E4EEBC4001E8468 /* main.m */; };
 		7F84A8751E4EEBC4001E8468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8741E4EEBC4001E8468 /* AppDelegate.m */; };
 		7F84A8781E4EEBC4001E8468 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84A8771E4EEBC4001E8468 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 		7F491E7A1E812A0A00636F8C /* NSString+TBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBExtension.h"; sourceTree = "<group>"; };
 		7F491E7B1E812A0A00636F8C /* NSString+TBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBExtension.m"; sourceTree = "<group>"; };
 		7F491E7D1E812E4000636F8C /* macro_universal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macro_universal.h; sourceTree = "<group>"; };
+		7F5114561EB031E300F66820 /* TBEnlargeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBEnlargeButton.h; sourceTree = "<group>"; };
+		7F5114571EB031E300F66820 /* TBEnlargeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBEnlargeButton.m; sourceTree = "<group>"; };
 		7F84A86D1E4EEBC4001E8468 /* TBCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F84A8711E4EEBC4001E8468 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F84A8731E4EEBC4001E8468 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +121,15 @@
 			path = TBTools;
 			sourceTree = "<group>";
 		};
+		7F5114551EB0310600F66820 /* TBSubclass */ = {
+			isa = PBXGroup;
+			children = (
+				7F5114561EB031E300F66820 /* TBEnlargeButton.h */,
+				7F5114571EB031E300F66820 /* TBEnlargeButton.m */,
+			);
+			path = TBSubclass;
+			sourceTree = "<group>";
+		};
 		7F84A8641E4EEBC4001E8468 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 		7F84A86F1E4EEBC4001E8468 /* TBCategory */ = {
 			isa = PBXGroup;
 			children = (
+				7F5114551EB0310600F66820 /* TBSubclass */,
 				7F491E761E81285C00636F8C /* TBTools */,
 				7F84A8A31E4EEC56001E8468 /* TBCategory */,
 				7F84A8731E4EEBC4001E8468 /* AppDelegate.h */,
@@ -345,6 +358,7 @@
 				7F84A8BE1E4EEC56001E8468 /* UIView+TBFrame.m in Sources */,
 				7F84A8B61E4EEC56001E8468 /* NSCalendar+TBExtension.m in Sources */,
 				7F84A8BA1E4EEC56001E8468 /* UIButton+TBExtension.m in Sources */,
+				7F5114581EB031E300F66820 /* TBEnlargeButton.m in Sources */,
 				7F84A8781E4EEBC4001E8468 /* ViewController.m in Sources */,
 				7F84A8BC1E4EEC56001E8468 /* UIImageView+TBSetHead.m in Sources */,
 				7F84A8B71E4EEC56001E8468 /* NSDate+TBExtension.m in Sources */,
