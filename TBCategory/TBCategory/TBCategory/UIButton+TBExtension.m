@@ -28,7 +28,12 @@ static char rightNameKey;
  @param action 事件响应
  @param controlEvents 事件
  */
-- (void)setBackgroundNormalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage selectedImage:(UIImage *)selectedImage addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
+- (void)setBackgroundNormalImage:(UIImage *)normalImage
+                highlightedImage:(UIImage *)highlightedImage
+                   selectedImage:(UIImage *)selectedImage
+                       addTarget:(id)target
+                          action:(SEL)action
+                forControlEvents:(UIControlEvents)controlEvents {
 
     if (normalImage) {
         [self setBackgroundImage:normalImage forState:UIControlStateNormal];
@@ -58,7 +63,12 @@ static char rightNameKey;
  @param action 事件响应
  @param controlEvents 事件
  */
-- (void)setNormalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage selectedImage:(UIImage *)selectedImage addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
+- (void)setNormalImage:(UIImage *)normalImage
+      highlightedImage:(UIImage *)highlightedImage
+         selectedImage:(UIImage *)selectedImage
+             addTarget:(id)target
+                action:(SEL)action
+      forControlEvents:(UIControlEvents)controlEvents {
 
     if (normalImage) {
         [self setImage:normalImage forState:UIControlStateNormal];
@@ -88,7 +98,10 @@ static char rightNameKey;
  @param bottom 底部扩大数值
  @param right 右边扩大数值
  */
-- (void)enlargeEdgeWithTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right {
+- (void)enlargeEdgeWithTop:(CGFloat)top
+                      left:(CGFloat)left
+                    bottom:(CGFloat)bottom
+                     right:(CGFloat)right {
     
     objc_setAssociatedObject(self, &topNameKey, [NSNumber numberWithFloat:top], OBJC_ASSOCIATION_COPY_NONATOMIC);
     objc_setAssociatedObject(self, &leftNameKey, [NSNumber numberWithFloat:left], OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -112,7 +125,8 @@ static char rightNameKey;
     }
 }
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+- (UIView *)hitTest:(CGPoint)point
+          withEvent:(UIEvent *)event {
     
     CGRect rect = [self enlargedRect];
     if (CGRectEqualToRect(rect, self.bounds)) {

@@ -28,7 +28,8 @@
 /** 
  把方形图片裁剪为圆角矩形
  */
-+ (instancetype)tb_roundedRectImage:(NSString *)name cornerRadius:(CGFloat)cornerRadius;
++ (instancetype)tb_roundedRectImage:(NSString *)name
+                       cornerRadius:(CGFloat)cornerRadius;
 
 /** 
  给定一个图片名称生成一个不会被渲染的图片
@@ -43,27 +44,34 @@
 /** 
  合成两张图片 
  */
-+ (UIImage *)tb_coverImage:(UIImage *)image1 withImage:(UIImage *)image2;
++ (UIImage *)tb_coverImage:(UIImage *)image1
+                 withImage:(UIImage *)image2;
 
 /** 
  为给定图片生成一张带蒙版的圆角矩形图片
  */
-- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius coverAlpha:(CGFloat)alpha;
+- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius
+                                         coverAlpha:(CGFloat)alpha;
 
 /** 
  为image生成一张带边框的图片
  */
-+ (UIImage *)tb_bolderImageWithImage:(UIImage *)image imageSize:(CGSize)size borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
++ (UIImage *)tb_bolderImageWithImage:(UIImage *)image
+                           imageSize:(CGSize)size
+                         borderWidth:(CGFloat)borderWidth
+                         borderColor:(UIColor *)borderColor;
 
 /** 
  生成一张带边框的图片
  */
-- (UIImage *)tb_getBolderImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+- (UIImage *)tb_getBolderImageWithBorderWidth:(CGFloat)borderWidth
+                                  borderColor:(UIColor *)borderColor;
 
 /** 
  缩放图片至给定尺寸
  */
-+ (UIImage *)tb_originImage:(UIImage *)image scaleToSize:(CGSize)size;
++ (UIImage *)tb_originImage:(UIImage *)image
+                scaleToSize:(CGSize)size;
 
 /** 
  缩放至给定尺寸

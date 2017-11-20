@@ -19,7 +19,10 @@
 /**
  扩大按钮点击范围
  */
-- (void)setEnlargeEdgeTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right;
+- (void)setEnlargeEdgeTop:(CGFloat)top
+                     left:(CGFloat)left
+                   bottom:(CGFloat)bottom
+                    right:(CGFloat)right;
 
 
 @end

@@ -44,7 +44,10 @@
  @param bottom 底部扩大数值
  @param right 右边扩大数值
  */
-- (void)setEnlargeEdgeTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right {
+- (void)setEnlargeEdgeTop:(CGFloat)top
+                     left:(CGFloat)left
+                   bottom:(CGFloat)bottom
+                    right:(CGFloat)right {
     
     _topEdge = top;
     _leftEdge = left;
@@ -52,7 +55,7 @@
     _rightEdge = right;
 }
 
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event {
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
     
     CGRect bounds = self.bounds;
     

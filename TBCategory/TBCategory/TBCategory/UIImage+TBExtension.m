@@ -17,7 +17,8 @@
  *
  *  @return 合成后的图片
  */
-+ (UIImage *)tb_coverImage:(UIImage *)image1 withImage:(UIImage *)image2 {
++ (UIImage *)tb_coverImage:(UIImage *)image1
+                 withImage:(UIImage *)image2 {
     // 1.开启图形上下文
     // scale:比例因素 点:像素比例 0:自动识别比例因素
     UIGraphicsBeginImageContextWithOptions(image1.size, NO, 0);
@@ -97,7 +98,8 @@
 }
 
 
-- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius coverAlpha:(CGFloat)alpha {
+- (instancetype)tb_roundedRectImageWithCornerRadius:(CGFloat)cornerRadius
+                                         coverAlpha:(CGFloat)alpha {
 
 //    UIView *cover = [[UIView alloc] init];
 //    cover.frame = CGRectMake(0, 0, self.size.width, self.size.height);
@@ -158,7 +160,8 @@
  *
  *  @return 裁剪后的圆角矩形图片
  */
-+ (instancetype)tb_roundedRectImage:(NSString *)name cornerRadius:(CGFloat)cornerRadius {
++ (instancetype)tb_roundedRectImage:(NSString *)name
+                       cornerRadius:(CGFloat)cornerRadius {
 
     return [[self imageNamed:name] tb_roundedRectImageWithCornerRadius:cornerRadius];
 }
@@ -207,7 +210,10 @@
  @param borderColor 边框颜色
  @return 带边框的图片
  */
-+ (UIImage *)tb_bolderImageWithImage:(UIImage *)image imageSize:(CGSize)size borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
++ (UIImage *)tb_bolderImageWithImage:(UIImage *)image
+                           imageSize:(CGSize)size
+                         borderWidth:(CGFloat)borderWidth
+                         borderColor:(UIColor *)borderColor {
     
     CGSize newSize = CGSizeMake(size.width + 2 * borderWidth, size.height + 2 * borderWidth);
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
@@ -231,7 +237,8 @@
  @param borderColor 边框颜色
  @return 带边框的图片
  */
-- (UIImage *)tb_getBolderImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+- (UIImage *)tb_getBolderImageWithBorderWidth:(CGFloat)borderWidth
+                                  borderColor:(UIColor *)borderColor {
     
     CGSize newSize = CGSizeMake(self.size.width + 2 * borderWidth, self.size.height + 2 * borderWidth);
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
@@ -255,7 +262,8 @@
  @param size 给定尺寸
  @return 缩放后的图片
  */
-+ (UIImage *)tb_originImage:(UIImage *)image scaleToSize:(CGSize)size {
++ (UIImage *)tb_originImage:(UIImage *)image
+                scaleToSize:(CGSize)size {
     
     UIGraphicsBeginImageContext(size);
     
